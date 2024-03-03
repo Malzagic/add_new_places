@@ -1,8 +1,8 @@
 import axios from "axios";
-const GOOGLE_MAP_API = `AIzaSyDoHMJy_QtneSHhKN6Cyxajv6vRwtnpXJQ`;
+const API_KEY = process.env.GOOGLE_MAP_API;
 
 export function getMapPreview(lat, lon) {
-  const imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=13&size=400x200&maptype=roadmap&markers=color:red%7Clabel:S%7C${lat},${lon}&key=${GOOGLE_MAP_API}`;
+  const imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=13&size=400x200&maptype=roadmap&markers=color:red%7Clabel:S%7C${lat},${lon}&key=${API_KEY}`;
   return imagePreviewUrl;
 }
 
